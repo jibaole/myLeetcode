@@ -54,19 +54,51 @@
 // Related Topics 栈 字符串 👍 2673 👎 0
 
 package leetcode.editor.cn;
-//Java：有效的括号
-public class ValidParentheses{
- public static void main(String[] args) {
-  Solution solution = new ValidParentheses().new Solution();
-  // TO TEST
- }
-  
- //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-/*    public boolean isValid(String s) {
 
-    }*/
-}
+import java.util.LinkedList;
+
+//Java：有效的括号
+public class ValidParentheses {
+    public static void main(String[] args) {
+        Solution solution = new ValidParentheses().new Solution();
+        String s = "()[]{}";
+        System.out.println(solution.isValid(s));
+    }
+
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public boolean isValid(String s) {
+            LinkedList<Character> list = new LinkedList();
+            for (int i = 0; i < s.length(); i++) {
+                if (s.charAt(i) == '[' || s.charAt(i) == '(' || s.charAt(i) == '{') {
+                    list.push(s.charAt(i));
+                } else {
+                    if (list.size() == 0) {
+                        return false;
+                    }
+                    Character pop = list.pop();
+                    Character c = null;
+                    if (pop.equals('[')) {
+                        c = ']';
+                    }
+                    if (pop.equals('(')) {
+                        c = ')';
+                    }
+                    if (pop.equals('{')) {
+                        c = '}';
+                    }
+                    if (!c.equals(s.charAt(i))) {
+                        return false;
+                    }
+                }
+            }
+            if (list.size() != 0) {
+                return false;
+            }
+            return true;
+        }
+    }
 //leetcode submit region end(Prohibit modification and deletion)
+
 
 }
