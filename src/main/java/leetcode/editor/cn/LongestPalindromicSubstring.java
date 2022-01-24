@@ -47,7 +47,8 @@ package leetcode.editor.cn;
 public class LongestPalindromicSubstring {
     public static void main(String[] args) {
         Solution solution = new LongestPalindromicSubstring().new Solution();
-        System.out.println(solution.longestPalindrome("badabamo"));
+       // System.out.println(solution.longestPalindrome("badabamo"));
+
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
@@ -77,6 +78,9 @@ public class LongestPalindromicSubstring {
             return s.substring(maxi, maxj + 1);
         }
     }
+
+
 //leetcode submit region end(Prohibit modification and deletion)
+
 
 }

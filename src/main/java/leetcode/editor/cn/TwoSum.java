@@ -57,12 +57,14 @@ public class TwoSum {
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        public int[] twoSum(int[] nums, int target) {
-            for (int i = 0; i < nums.length; i ++) {
-                int l = target - nums[i];
-                int positon = Arrays.binarySearch(nums, l);
-                if ( positon > 0 ) {
-                    return new int[]{i, positon};
+        public int[] twoSum (int[] numbers, int target) {
+            int length = numbers.length;
+            for(int i=0;i < length;i++){
+                int temp = target - numbers[i];
+                for(int j= i+1;j < length;j++){
+                    if(numbers[j] == temp){
+                        return new int[] {i,j};
+                    }
                 }
             }
             return null;

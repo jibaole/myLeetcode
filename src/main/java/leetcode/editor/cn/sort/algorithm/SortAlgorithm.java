@@ -10,10 +10,11 @@ import java.util.Arrays;
 public class SortAlgorithm {
 
     public static void main(String[] args) {
-       /* int[] array = {4, 7, 1, 19, 12, 44, 67};
+       int[] array = {4, 7, 1, 19, 12, 44, 67};
         bubbleSort(array);
-        fib(10);*/
-        System.out.println(fib(10));
+        /* fib(10);*/
+
+       // System.out.println(fib(10));
     }
 
 
