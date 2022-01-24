@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @description：排序算法 https://zhuanlan.zhihu.com/p/335048580
- * @author：JBL
+ * @author：JBL@
  * @date：2021/11/14 10:06 下午
  */
 public class SortAlgorithm {
